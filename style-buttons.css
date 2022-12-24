@@ -1,0 +1,146 @@
+/* animation property
+animation: name duration timing-function delay iteration-count direction fill-mode */
+
+.battons-conteiner {
+    padding: 60px 20px;
+    display: flex;
+    gap: 30px;
+    background-color: #84A178;
+}
+
+.bnt {
+    width: 152px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    background-color: #F8D24E;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    cursor: pointer;
+}
+.bnt:hover {
+    background-color: #0A8817;
+}
+.bnt:focus {
+    background-color: #0A8817;
+    color: white;
+}
+.bnt-button:disabled {
+    background: #ABABAB;
+}
+
+/* Animation of background-color */
+/* All animation: 3s cubic-bezier(0.4,0.2,0,1) 0s; */
+.bgr-button {
+    background-color: #F8D24E;
+
+    animation-name: gold-animate;
+    animation-duration: 3000ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.bgr-button:hover {
+    animation-play-state: paused;
+}
+@keyframes gold-animate {
+    0% {
+        background-color:
+            linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+    }
+    50% {
+        background-color: rgb(239, 187, 92);
+    }
+    100% {
+        background-color: #F8D24E;
+    }
+}
+
+/* Animation of outline */
+.shine-outline-button {
+    /* outline: 1px solid #F8D24E; */
+    border-radius: 10px;
+    animation-name: outline-animate;
+    animation-duration: 3000ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+} 
+.shine-outline-button:hover,
+.shine-outline-button:focus {
+    animation-play-state: paused;  
+}
+@keyframes outline-animate {
+  25% {
+    outline: 1px solid #F8D24E;
+  }
+    50% {
+        outline: 2px solid #9b466f;
+    }
+    100% {
+        outline: 3px solid #ee58bc;
+    }
+}
+/* Animation of font-size */
+.change-font-size-button {
+    animation-name: font-size-animate;
+    animation-duration: 3000ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes font-size-animate {
+    25% {
+        font-size: 14px;
+    }
+      50% {
+        font-size: 16px;
+      }
+      100% {
+        font-size: 16px;
+      }
+  }
+
+/* Animation of size */
+  .change-size-button {
+    animation: font-size 3000ms cubic-bezier(0.4, 0, 0.2, 1) 3s infinite reverse forwards;
+}
+    @keyframes font-size {
+        0% {
+            animation-timing-function: ease-out;
+            transform: scale(1);
+            transform-origin: center center;
+        }
+        10% {
+            animation-timing-function: ease-in;
+            transform: scale(0.91);
+        }
+        17% {
+            animation-timing-function: ease-out;
+            transform: scale(0.98);
+        }
+        33% {
+            animation-timing-function: ease-in;
+            transform: scale(0.87);
+        }
+        45% {
+            animation-timing-function: ease-out;
+            transform: scale(1);
+        }
+    }
+
+
+
+
+
+  
+ 
+  
+  
+
+
+
+   
+    
